@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Environments and local settings
+.venv/
+venv/
+.env
+.env.*
+
+# Notebooks and simulation outputs
+.ipynb_checkpoints/
+outputs/*
+!outputs/.gitkeep
+data/raw/*
+!data/raw/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Build and IDE files
+build/
+dist/
+.vscode/
+.idea/
+
+# Large local artifacts
+*.bag
+*.db3
+*.mcap
+*.npz
+*.h5
+*.hdf5
+*.mp4
+*.zip
