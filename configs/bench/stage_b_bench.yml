@@ -1,0 +1,24 @@
+name: stage_b_single_foot_bench
+model_xml: models/bench/single_foot_bench.xml
+duration_s: 1.5
+timestep_s: 0.002
+gravity_mps2: [0.0, 0.0, -9.81]
+foot_mass_kg: 4.0
+foot_size_m: [0.20, 0.10]
+contact_points_m:
+  - [0.10, 0.045, -0.025]
+  - [0.10, -0.045, -0.025]
+  - [-0.08, 0.045, -0.025]
+  - [-0.08, -0.045, -0.025]
+normal: [0.0, 0.0, 1.0]
+tangent_basis:
+  - [1.0, 0.0, 0.0]
+  - [0.0, 1.0, 0.0]
+normal_load_n: 39.24
+normal_force_max_n: [160.0, 160.0, 160.0, 160.0]
+friction_coefficients: [0.50, 0.50, 0.50, 0.50]
+initial_position_m: [0.0, 0.0, 0.025]
+initial_linear_velocity_mps: [0.0, 0.0, 0.0]
+initial_angular_velocity_radps: [0.0, 0.0, 0.0]
+solver: CLARABEL
+solver_tolerance: 1.0e-7

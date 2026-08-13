@@ -19,6 +19,20 @@ The reference environment uses Python 3.11, MuJoCo 3.1.3, NumPy, SciPy, CVXPY, M
 
 Keep configuration in `configs/`, raw and processed data in `data/`, and generated figures/results in `outputs/`. Do not commit generated output, local virtual environments, credentials, or large recordings. Pin experiment settings and record the submodule commit used for each result.
 
+## Running Stage A and Stage B
+
+From the repository root, activate the `foot-wrench` environment and expose the source tree:
+
+```powershell
+$env:PYTHONPATH='src'
+python -m pytest -q
+python experiments/stage_a_math/run_baseline.py
+python experiments/stage_a_math/plot_baseline.py
+python experiments/stage_b_bench/run_bench.py
+```
+
+Stage A writes ignored query files and projections under `outputs/stage_a_baseline`. Stage B writes MuJoCo contact truth under `outputs/stage_b_bench`. The test suite currently covers the analytical wrench mapping, SOCP/reduced-support agreement, set membership, inactive points, radial capacity, and MuJoCo ground-contact extraction.
+
 ## Status
 
-The repository currently contains the project scaffold. Stage A should be implemented and validated before adding the X1 model or learning components.
+Stage A and the simplified Stage B digital bench are implemented. X1 integration, whole-body instantaneous feasibility, learning, and double-support experiments remain later stages.
